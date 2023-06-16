@@ -17,6 +17,7 @@
   height: 140px;
   align-items: center;
   background-color: #fff;
+  background-color: black;
   z-index: 5;
 }
 
@@ -38,7 +39,7 @@
 }
 
 .navbar-links li a:hover{
-  color: black;
+  color: white;
 }
 
 .navbar-links li a:after {
@@ -67,7 +68,7 @@
 .container {
   display: flex;
   justify-content: space-between;
-  height: 600px;
+  height: 1200px;
   background-image: url('/4season-assets/pexels-photo-995300.webp');
   background-position: center;
   background-repeat: no-repeat;
@@ -89,6 +90,7 @@
   font-family: sans-serif;
   font-weight: thin;
   color: #fff;
+  color:rgb(0, 0, 0);
   letter-spacing: 5px;
   padding-left: 15px;
   padding-right: 15px;
@@ -97,6 +99,7 @@
 .intro-with-buttons p:nth-of-type(2) {
   font-size: 44px;
   color: white;
+  color: black;
 }
 
 #animated-p {
@@ -167,17 +170,20 @@
   padding: 18px 36px;
   text-transform: uppercase;
   color: #fff;
+  color: #c9ab85;
   background-color: rgba(201,171,133,255);
+  background-color: black;
   text-decoration: none;
   font-size: 28px;
   margin-left: 20px;
   text-align: center;
+  opacity: 0.8;
 }
 
 .styled-button:hover {
   cursor: pointer;
   background-color: black;
-  color: #fff;
+  opacity: 1;
 }
 
 /* About Section */
@@ -192,15 +198,15 @@
   padding: 100px;
   text-align: center;
   background-color: #fff;
+  background-color: #c9ab85;
   color: black;
 }
 
 #about-title {
-  font-size: 36px;
+  font-size: 56px;
   text-transform: uppercase;
   letter-spacing: 3px;
   margin-bottom: 60px;
-  color: black;
 }
 
 .about-section p {
@@ -220,12 +226,12 @@
   font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 2px;
-  background-color: #c9ab85;
+  background-color: black;
 }
 
 .about-button a {
   text-decoration: none;
-  color: white;
+  color: #c9ab85;
 }
 
 .about-button a:hover {
@@ -237,7 +243,7 @@
 
 .testimonial-title {
   text-align: center;
-  color: #c9ab85;
+  color: black;
   font-size: 58px;
   margin-top: 150px;
   font-family: 'Shadows Into Light', cursive;
@@ -250,6 +256,7 @@
   width: 100%;
   align-items: center;
   height: 500px;
+  background-color: #c9ab85;
 }
 
 .stacked-container {
@@ -275,11 +282,11 @@
 .reviewer {
   text-transform: uppercase;
   margin-top: 25px;
-  color: #c9ab85;
+  color: black;
 }
 
 .fa-star {
-  color: #c9ab85;
+  color: black;
 }
 
 #container-0 {
@@ -328,7 +335,7 @@
   text-align: center;
   font-size: 78px;
   text-transform: uppercase;
-  color: #fff;
+  color: #c9ab85;
   font-family: Roboto;
   margin-top: 250px;
   margin-bottom: 250px;
@@ -403,12 +410,13 @@
   font-size: 78px;
   padding-bottom: 95px;
   margin-top: auto;
+  color:#c9ab85;
 }
 
-/* @font-face {
+@font-face {
   font-family: Brush Script Pro;
   src: url("Fontspring-DEMO-brush_script_pro.otf") format("opentype");
-} */
+}
 
 
 /* Products section */
@@ -424,7 +432,7 @@
 
 .products-section img {
   width: auto;
-  height: 50px;
+  height: 100px;
   filter: grayscale(100%);
 }
 
@@ -473,7 +481,7 @@
   margin-bottom: 10px;
   color: #fff;
   font-size: 16px;
-  color: black;
+  color: #c9ab85;
 }
 
 .first-column div a {
@@ -520,8 +528,8 @@
   height: 500px;
   justify-content: center;
   text-align: center;
-  background-color: #c9ab85;
-  color: #fff;
+  background-color: black;
+  color: white;
 }
 
 
@@ -565,14 +573,14 @@
 }
 
 .social-media-banner ul li a i {
-  color: #fff;
+  color: #c9ab85;
   padding: 5px;
   margin: 15px;
 }
 
 .social-media-banner ul li a i:hover {
   cursor: pointer;
-  color: black;
+  color: #fff;
 }
 
 #map {
@@ -1523,7 +1531,7 @@
 
   50% {
     -webkit-transform: translate(0, -5px);
-    background: #BA55D3;
+    background: black;
   }
 
   80%,
@@ -1538,8 +1546,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 30px;
   padding-top: 20px;
+}
+
+.reviews{
+  background-color: #c9ab85;
 }
 
 /* SVG Experiment */
@@ -1786,8 +1797,8 @@
   text-align: center;
   padding-top: 200px;
   margin-bottom: 35px;
-  font-family: 'Shadows Into Light', cursive;
-  color: #BA55D3;
+  font-family: Bush Script Pro, cursive;
+  color: #c9ab85;
 }
 
 .gallery-title:nth-of-type(2){

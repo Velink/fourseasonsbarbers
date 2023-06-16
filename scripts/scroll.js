@@ -1,7 +1,7 @@
 let awardSticker = document.getElementById('fixed-sticker');
 
 window.addEventListener('scroll', () => {
-    const scrollable = document.documentElement.scrollHeight - (window.innerHeight + 500);
+    const scrollable = document.documentElement.scrollHeight - (window.innerHeight + 2000);
     const scrolled = window.scrollY;
 
 
@@ -9,7 +9,7 @@ window.addEventListener('scroll', () => {
         if(Math.ceil(scrolled) > scrollable || Math.ceil(scrolled) < 350){
             awardSticker.style.display = 'none';
          } 
-         else if(Math.ceil(scrolled) < 1700) {
+         else if(Math.ceil(scrolled) < 400) {
              awardSticker.style.display = 'block';
          }
     }
