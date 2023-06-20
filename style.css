@@ -1171,7 +1171,7 @@ body{
 /* Mobile Layout */
 .toggle-button {
   position: absolute;
-  top: 2.75rem;
+  top: 2.20rem;
   right: 3.5rem;
   display: none;
   text-decoration: none;
@@ -1192,7 +1192,7 @@ body{
 
   .stranger-things {
     background-color: black;
-    height: 120px;
+    height: 100px;
     width: 100%;
   }
 
@@ -1226,7 +1226,7 @@ body{
   #nav-test{
     z-index: 9;
     position: absolute;
-    top: 30px;
+    top: 18px;
   }
 
   .navbar-links {
