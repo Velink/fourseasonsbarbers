@@ -1568,7 +1568,7 @@ body{
   }
 
   #animated-p {
-    font-size: 36px;
+    font-size: 24px;
     margin-top: 50p;
     color: white;
   }
@@ -1819,7 +1819,7 @@ body{
     }
   
     .four-seasons-intro span{
-      font-size: 56px;
+      font-size: 80px;
       color: #c9ab85;
     }
   
@@ -2066,6 +2066,90 @@ body{
   }
 }
 
+@media (min-width: 1251px) {
+    .navbar-links li a{
+      margin-left: 30px;
+    }
+
+    .container {
+      background-size: cover;
+    }
+
+    .barber-grid-item-desc {
+      font-size: 30px;
+    }
+
+   /* FOOTER */ 
+  .footer {
+    display: block;
+    height: auto;
+    padding-left: 25px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .location-section {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(1, auto);
+    gap: 120px;
+    justify-content: space-around;
+    margin-top: 20px;
+    margin: 20px auto;
+  }
+
+  .location-section {
+    height: auto;
+    justify-content: center;
+  }
+
+
+  #location-title {
+    padding-top: 30px;
+  }
+
+  #opening-hours-title {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 30px;
+  }
+
+  .first-column {
+    height: auto;
+    text-align: center;
+    width: 100%;
+  }
+
+  .first-column ul {
+    width: auto;
+  }
+
+  .second-column {
+    height: auto;
+    text-align: center;
+    width: 100%;  height: auto;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .second-column ul {
+    width: auto;
+  }
+
+  #opening-hours-title{
+    margin-top:0;
+  }
+
+  .third-column {
+    margin-bottom: 30px;
+  }
+}
+
 @media (min-width: 900px) and (max-width: 1100px){
   /* Barber Services Mobile */ 
   .barber-service-grid {
@@ -2076,6 +2160,16 @@ body{
 
   .barber-grid-item-desc {
     font-size: 32px;
+  }
+}
+
+@media (min-width: 1250px) and (max-width: 1415px){
+  .four-seasons-intro span {
+    font-size: 130px;
+  }
+
+  #animated-p {
+    font-size: 42px;
   }
 }
 
@@ -2113,36 +2207,6 @@ body{
   #nav-test{
     width: 140px;
     margin-left: 20px;
-  }
-}
-
-@media(min-width: 1251px) and (max-width: 1600px){
-  .navbar{
-    height: 156px;
-  }
-
-  #nav-test{
-    height: 160px;
-  }
-}
-
-@media(min-width: 1250px) {
-  .fixed-sticker {
-    margin-left: 85%;
-    width: 160px;
-    height: 210px;
-  }
-
-  .fixed-sticker p {
-    font-size: 14px;
-  }
-
-  .fixed-sticker img {
-    width: 100px;
-  }
-
-  .intro-with-buttons {
-    padding-left: 20px;
   }
 }
 
