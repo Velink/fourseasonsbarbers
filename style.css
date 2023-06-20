@@ -1301,7 +1301,7 @@ body{
   }
 
   .four-seasons-intro span{
-    font-size: 46px;
+    font-size: 36px;
     color: #c9ab85;
   }
 
@@ -1310,7 +1310,7 @@ body{
   }
 
   #animated-p {
-    font-size: 25px;
+    font-size: 18px;
     margin-top: 50p;
     color: white;
   }
@@ -1380,6 +1380,26 @@ body{
   /* Barber Services Mobile */ 
   .barber-service-grid {
     grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(6, auto);
+  }
+
+  .barber-grid-item {
+    background-color: red;
+    background-size: auto;
+  }
+
+  .barber-grid-item-title {
+    font-size: 60px;
+  }
+
+  .barber-grid-item-desc {
+    font-size: 32px;
+  }
+
+  .barber-grid-item-price {
+    margin-bottom: 0px;
+    font-size: 55px;
+    padding-bottom: 20px;
   }
 
   /* Testimonial Mobile */
@@ -1411,8 +1431,31 @@ body{
   }
 
   .testimonial-section {
-    height: 400px;
+    height: 300px;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .stacked-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .testimonial-title {
+    width: 90%;
+    font-size: 36px;
+    padding-bottom: 0px;
+  }
+
+  .review {
     width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 18px;
   }
 
   .stacked-container {
