@@ -1,7 +1,8 @@
 function initMap() {
     try {
         //The location 
-    const beautySalon = { lat: 51.653773, lng: -0.091950 };
+        //51.51503746916468, -0.07305030657195585
+    const beautySalon = { lat: 51.51503746916468, lng: -0.07305030657195585 };
 
     if(document.getElementById('map')){
         const map1 = new google.maps.Map(document.getElementById("map"), {

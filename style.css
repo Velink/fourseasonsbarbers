@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Passions+Conflict&family=Shadows+Into+Light&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Raleway:900&display=swap");
 @import url('http://fonts.cdnfonts.com/css/wishper-script');
 
 * {
@@ -8,6 +9,27 @@
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
 }
+
+body{
+  /* background-image: url(/4season-assets/full-logo\ \(1\).png); */
+  background-color: black;
+}
+
+/* NAV AND NAV ANIMATION */
+/* .nav-animate{
+  transition: all 1.25s ease-in;
+  position: absolute;
+  cursor: pointer;
+  text-align: center;
+}
+
+.nav-animate.nav-left{
+  left: -50%; 
+}
+
+.nav-animate.nav-left.move{
+  transform: translate(50%, 0);
+}  */
 
 .navbar {
   position: fixed;
@@ -26,20 +48,50 @@
   list-style: none;
 }
 
+.navbar-links li{
+  list-style: none;
+  margin: 0 20px;
+  transition: 0.5s;
+}
+
 .navbar-links li a {
   text-decoration: none;
-  margin-left: 45px;
+  margin-left: 75px;
   text-transform: uppercase;
   font-size: 24px;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.3em;
   color: #c9ab85;
 
   display: inline-block;
   position: relative;
+
+  /* IMPORT */
+  display: block;
+  position:relative;
+  text-decoration:none;
+  padding:5px;
+  font-size:24px;
+  font-family: sans-serif;
+  color:#fff;
+  text-transform:uppercase;
+  transition:0.5s;
+
+}
+
+.navbar-links:hover li a{
+  transform: scale(1.5);
+  opacity: 0.2;
+  filter: blue(5px);
 }
 
 .navbar-links li a:hover{
   color: white;
+
+  transform:scale(1.5);
+  opacity:1;
+  filter:blur(0);
+  text-decoration:none;
+  color:#fff;
 }
 
 .navbar-links li a:after {
@@ -60,6 +112,27 @@
   transform-origin: bottom left;
 }
 
+  /* IMPORT */
+.navbar-links li a:before{
+  content:'';
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:#c9ab85;
+  transition:0.5s;
+  transform-origin:right;
+  transform:scaleX(0);
+  z-index:-1;
+}
+
+.navbar-links li a:hover:before{
+  transition:transform 0.5s;
+  transform-origin:left;
+  transform:scaleX(1);
+}
+
 #nav-test {
   width: 170px;
   z-index: -2;
@@ -67,44 +140,177 @@
 
 .container {
   display: flex;
-  justify-content: space-between;
-  height: 1200px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 1230px;
   background-image: url('/4season-assets/pexels-photo-995300.webp');
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; 
   background-size: 100%;
 }
 
+/* INTRO BUTTONS AND ANIMATION */
+
 .intro-with-buttons {
   width: 100%;
-  margin-top: 50px;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
-.intro-with-buttons p:nth-of-type(1) {
-  text-transform: uppercase;
-  font-size: 66px;
-  font-family: sans-serif;
-  font-weight: thin;
-  color: #fff;
-  color:rgb(0, 0, 0);
-  letter-spacing: 5px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.intro-with-buttons p:nth-of-type(2) {
-  font-size: 44px;
-  color: white;
-  color: black;
-}
-
 #animated-p {
+  margin-top: 20px;
+  font-size: 48px;
+}
+
+.intro-with-stacked-p{
+  display: flex;
+  flex-direction: column;
+  margin-top: 150px;
+}
+
+.four-seasons-intro span{
+  font-family: "Raleway", sans-serif;
+  font-weight: bolder;
+  font-size: 160px;
+  letter-spacing: 0.1em;
+}
+
+.four-seasons-intro span:hover{
+  color: #c9ab85;
+  cursor: pointer;
+}
+
+.waviy {
+  position: relative;
+}
+.waviy span {
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  animation: flip 2s;
+  animation-delay: calc(.2s * var(--i))
+}
+@keyframes flip {
+  0%,80% {
+    color: #c9ab85;
+    transform: rotateY(360deg);
+  }
+}
+
+.styled-button {
+  border: none;
+  border-radius: 25px;
+  width: auto;
+  padding: 36px 72px;
+  text-transform: uppercase;
+  color: #c9ab85;
+  background-color: black;
+  text-decoration: none;
+  font-size: 36px;
+  margin-left: 20px;
+  text-align: center;
+  opacity: 0.9;
+}
+
+.intro-buttons-wild{
+  display: flex;
+  justify-content: center;
+  height: 300px;
+  align-items: center;
+}
+
+.styled-button:hover {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  opacity: 1;
+}
+
+.animate {
+  margin-top: 30px;
+  background-color: #c9ab85;
+  transition: all 1.25s ease-in;
+  position: absolute;
+  cursor: pointer;
+  text-align: center;
+}
+
+.animate.left { 
+  left: -40%;   
+}
+
+.animate.right { 
+  right: -40%;  
+}
+
+.animate.left.move {
+  left: 48%; 
+  transform: translate(-100%, 0);
+  background-color: black;
+}
+
+.animate.right.move {
+  right: 48%; 
+  transform: translate(100%, 0);
+  background-color: black;
+}
+
+
+/* #animated-title{
   width: 100%;
 }
+
+#animated-title span {
+  opacity: 0;
+  padding-left: 10px;
+  transform: translateY(30px);
+  animation: fadeIn 3.0s ease-out forwards;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+#animated-title {
+  width: 100%;
+}
+
+#animated-title span:nth-of-type(2) {
+  animation-delay: 0.5s;
+}
+
+#animated-title span:nth-of-type(3) {
+  animation-delay: 0.75s;
+}
+
+#animated-title span:nth-of-type(4) {
+  animation-delay: 1.0s;
+}
+
+#animated-title span:nth-of-type(5) {
+  animation-delay: 1.25s;
+}
+
+#animated-title span:nth-of-type(6) {
+  animation-delay: 1.5s;
+}
+
+#animated-title span:nth-of-type(7) {
+  animation-delay: 1.75s;
+}
+
+#animated-title span:nth-of-type(8) {
+  animation-delay: 2.0s;
+}
+
+#animated-title span:nth-of-type(9) {
+  animation-delay: 2.25s;
+} */
+
 
 #animated-p span {
   opacity: 0;
@@ -154,38 +360,6 @@
   }
 }
 
-.button-container {
-  margin-top: 50px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-}
-
-.styled-button {
-  border: none;
-  border-radius: 25px;
-  width: auto;
-  padding: 18px 36px;
-  text-transform: uppercase;
-  color: #fff;
-  color: #c9ab85;
-  background-color: rgba(201,171,133,255);
-  background-color: black;
-  text-decoration: none;
-  font-size: 28px;
-  margin-left: 20px;
-  text-align: center;
-  opacity: 0.8;
-}
-
-.styled-button:hover {
-  cursor: pointer;
-  background-color: black;
-  opacity: 1;
-}
-
 /* About Section */
 
 .about-section {
@@ -209,8 +383,27 @@
   margin-bottom: 60px;
 }
 
+.text-sequence {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+.paragraph span{
+  display: block;
+  opacity: 0;
+  animation: reveal 1.5s forwards var(--delay);
+}
+
+@keyframes reveal {
+  from {translate: 0 20px;}
+  to {translate: none; opacity: 1;}
+}
+
 .about-section p {
-  margin-bottom: 55px;
+  margin-bottom: 25px;
   width: 550px;
   font-size: 20px;
   align-self: center;
@@ -227,6 +420,8 @@
   text-transform: uppercase;
   letter-spacing: 2px;
   background-color: black;
+  margin-top: 75px;
+  margin-bottom: 75px;
 }
 
 .about-button a {
@@ -236,7 +431,7 @@
 
 .about-button a:hover {
   cursor: pointer;
-  color: black;
+  color: white;
 }
 
 /* Testimonial Section */
@@ -255,12 +450,12 @@
   text-align: center;
   width: 100%;
   align-items: center;
-  height: 500px;
+  height: 900px;
   background-color: #c9ab85;
 }
 
 .stacked-container {
-  width: 30%;
+  width: 40%;
   text-align: center;
   position: absolute;
   text-align: center;
@@ -276,13 +471,18 @@
   height: auto;
   text-align: justify;
   margin-top: 10px;
-  font-size: 24px;
+  font-size: 36px;
 }
 
 .reviewer {
   text-transform: uppercase;
   margin-top: 25px;
   color: black;
+  font-size: 24px;
+}
+
+.rating{
+  margin-bottom: 30px;
 }
 
 .fa-star {
@@ -357,6 +557,10 @@
   color: white;
 }
 
+.barber-grid-item:hover .barber-grid-item-title {
+  color:#c9ab85;
+}
+
 .barber-grid-item:nth-of-type(1){
   background-image: url(/4season-assets/pexels-photo-10517480.jpeg);
   background-repeat: no-repeat;
@@ -425,7 +629,7 @@
   width: 100%;
   display: flex;
   justify-content: space-around;
-  background-color: #f2f2f2;
+  background-color: black;
   height: 200px;
   align-items: center;
 }
@@ -439,6 +643,91 @@
 .products-section img:hover {
   filter: grayscale(0%);
 }
+
+/* ANIMATED APPOINTMENT */
+
+.animated-appointments{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  margin-top: 150px;
+}
+
+#container {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    width: 100vw;
+    height: 80pt;
+    top: 0;
+    bottom: 0;
+    filter: url(#threshold) blur(0.6px);
+}
+
+#text1,
+#text2 {
+    position: absolute;
+    width: 100%;
+    display: inline-block;
+
+    font-family: "Raleway", sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-size: 80pt;
+    color: rgb(201, 171, 133);
+
+    text-align: center;
+
+    user-select: none;
+}
+
+/* FOLD UL */
+.fold-ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 500px;
+  display: flex;
+}
+
+.fold-ul li{
+  list-style: none;
+  width: 25%;
+  background: url(/4season-assets/lights-window-shop-store.jpeg);
+  height: 100%;
+  transition: 0.5s;
+  
+}
+
+.fold-ul:hover li:nth-child(odd){
+  transform: skewY(15deg);
+  box-shadow: inset 20px 0 50px rgba(0,0,0, 0.5);
+}
+
+.fold-ul:hover li:nth-child(even){
+  transform: skewY(-15deg);
+  box-shadow: inset 20px 0 50px rgba(0,0,0, 0.5)
+}
+
+.fold-ul li:nth-child(1){
+  background-position: 0;
+}
+
+.fold-ul li:nth-child(2){
+  background-position: -25vw;
+}
+
+.fold-ul li:nth-child(3){
+  background-position: -50vw;
+}
+
+.fold-ul li:nth-child(4){
+  background-position: -75vw;
+}
+
+
 
 /* Location Section */
 
@@ -525,11 +814,13 @@
 .footer {
   display: flex;
   width: 100%;
-  height: 500px;
+  height: 600px;
   justify-content: center;
+  align-items: center;
   text-align: center;
   background-color: black;
   color: white;
+  padding-bottom: 100px;
 }
 
 
@@ -612,6 +903,10 @@
 .card p {
   padding: 5px;
   font-size: 15px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  font-weight: bolder;
+  letter-spacing: 0.2em;
 }
 
 #body2 {
@@ -897,12 +1192,19 @@
     color: #fff;
   }
 
+  .stranger-things {
+    background-color: black;
+    height: 120px;
+    width: 100%;
+  }
+
   .navbar {
-    height: 100px;
+    height: auto;
     position: fixed;
     width: 100%;
     flex-direction: column;
     align-items: center;
+    background-color: #c9ab85;
   }
 
   #nav-test{
@@ -925,19 +1227,22 @@
 
   #nav-test{
     z-index: 9;
+    position: absolute;
+    top: 30px;
   }
 
   .navbar-links {
     display: none;
     width: 100%;
     flex-direction: column;
-    padding-top: 250px;
+    background-color: black;
+    padding-top: 105px;
   }
 
   .navbar-links li a {
     margin-left: 0;
     color: #fff;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
   }
 
   .navbar-links li a:hover{
@@ -946,7 +1251,6 @@
 
   .navbar-links.active {
     display: flex;
-    background-color: #BA55D3;
     text-align: center;
   }
 
@@ -959,7 +1263,15 @@
   }
 
   #cross:hover{
-    color: black;
+    color: #c9ab85
+  }
+
+  #burger{
+    color: #c9ab85;
+  }
+
+  #burger:hover {
+    color: #fff;
   }
 
   #burger.hide {
@@ -976,43 +1288,126 @@
     background-image: url('/assets/backgrounds/hd-wallpaper-1382475.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-  }
-
-  .intro-with-buttons {
     height: auto;
-    padding-bottom: 10px;
-    margin-top: 0px;
-    background-color: transparent;
   }
 
-  .intro-with-buttons p:nth-of-type(1) {
-    font-size: 32px;
-    padding: 30px;
-    opacity: 1;
+  .intro-with-stacked-p{
+    background-color:transparent;
+    width: 90%;
   }
 
-  .intro-with-buttons p:nth-of-type(2) {
-    font-size: 18px;
-    padding: 20px;
+  #barbershop {
+    margin-bottom: 35px;
   }
 
-  .button-container {
-    flex-direction: column;
+  .four-seasons-intro span{
+    font-size: 46px;
+    color: #c9ab85;
   }
 
-  .button-container a {
-    margin-bottom: 15px;
-    font-size: 22px;
+  .four-seasons-intro span:hover {
+    color: #fff;
   }
 
   #animated-p {
-    color: #BA55D3;
-    opacity: 1;
+    font-size: 25px;
+    margin-top: 50p;
+    color: white;
+  }
+
+  @keyframes flip {
+    0%,80% {
+      color: black;
+      transform: rotateY(360deg);
+    }
+  }
+
+  .intro-buttons-wild {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .animate {
+    margin-top: 0;
+    position: relative;
+  }
+
+  .animate.left.move {
+    right: 0%;
+    left: 0%;
+    transform: translate(0, 0);
+  }
+
+  .animate.right.move {
+    right: 0%;
+    transform: translate(0, 0);
+  }
+
+  #left-dance {
+    background-color: #c9ab85;
+    padding: 12px 18px;
+    color: black;
+    font-size: 24px;
+    width: 75%;
+    margin-bottom: 10px;
+    margin-top: 85px;
+  }
+
+  #left-dance:hover {
+    color: white;
+  }
+
+  #right-dance {
+    background-color: #c9ab85;
+    padding: 12px 18px;
+    color: black;
+    font-size: 24px;
+    width: 75%;
+    margin-bottom: 85px;
   }
 
   /* About-us mobile */
+  .text-sequence p:nth-of-type(4) {
+    display: none;
+  }
+
   .about-section p {
-    width: 300px;
+    width: 350px;
+  }
+
+  /* Barber Services Mobile */ 
+  .barber-service-grid {
+    grid-template-columns: repeat(1, auto);
+  }
+
+  /* Testimonial Mobile */
+
+  .testimonial-title {
+    font-size: 40px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+  }
+
+  .testimonial-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .review {
+    font-size: 24px;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0 auto;
+    padding: 0;
+    margin: 0;
+  }
+
+  .loadingContainer {
+    display: none;
   }
 
   .testimonial-section {
@@ -1029,24 +1424,28 @@
     display: none;
   }
 
-  .testimonial-title {
-    font-size: 30px;
+  /* Footer */
+  
+  #container span {
+    font-size: 35pt;
   }
 
-  /* Footer */
-
   .footer {
-    display: flex;
-    flex-direction: column;
-    align-items: space-around;
-    justify-content: center;
-    height: auto;
+    padding-left: 25px;
+    padding-right: 20px;
+    padding-bottom: 100px;
+    width: 100%;
+    justify-content: space-around;
   }
 
   .location-section {
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(3, auto);
+    gap: 20px;
+    justify-content: space-around;
     justify-content: center;
-    width: 100%;
+    margin-top: 20px;
   }
 
   #location-title {
@@ -1060,7 +1459,275 @@
   }
 
   .first-column {
-    margin-top: 220px;
+    height: auto;
+    text-align: center;
+  }
+
+  .first-column ul {
+    justify-content: center;
+    margin: 20px auto;
+  }
+
+  .second-column {
+    display: block;
+    height: auto;
+  }
+
+  .second-column ul {
+    margin: 20px auto;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .card {
+    width: 300px;
+    height: 300px;
+    margin: 20px auto;
+  }
+
+  .card p {
+    font-size: 12px;
+  }
+
+  .footer {
+    height: auto;
+  }
+
+  .social-media-banner {
+    width: 100%;
+    margin-bottom: 100px;
+  }
+}
+
+/* Tablet Layout */
+
+@media (min-width: 651px) and (max-width: 768px) {
+
+  .fixed-sticker {
+    display: none;
+  }
+
+  /* Navbar */
+  .navbar {
+    height: 110px;
+    position: fixed;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .nav-test-link{
+    /* margin-left: 10%; */
+  }
+
+  .navbar-links {
+    /* width: 90%; */
+  }
+
+  .navbar-links li {
+    margin: 0px;
+  }
+
+  .navbar-links li a {
+    font-size: 10px;
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+
+  .container {
+    background-image: url('/assets/backgrounds/hd-wallpaper-1382475.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  /* Landing Page */
+  .container {
+    width: 100%;
+    background-image: url('/assets/backgrounds/hd-wallpaper-1382475.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+  }
+
+  .intro-with-stacked-p{
+    background-color:transparent;
+    width: 90%;
+  }
+
+  #barbershop {
+    margin-bottom: 35px;
+  }
+
+  .four-seasons-intro span{
+    font-size: 56px;
+    color: #c9ab85;
+  }
+
+  .four-seasons-intro span:hover {
+    color: #fff;
+  }
+
+  #animated-p {
+    font-size: 36px;
+    margin-top: 50p;
+    color: white;
+  }
+
+  @keyframes flip {
+    0%,80% {
+      color: black;
+      transform: rotateY(360deg);
+    }
+  }
+
+  .intro-buttons-wild {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .animate {
+    margin-top: 0;
+    position: relative;
+  }
+
+  .animate.left.move {
+    right: 0%;
+    left: 0%;
+    transform: translate(0, 0);
+  }
+
+  .animate.right.move {
+    right: 0%;
+    transform: translate(0, 0);
+  }
+
+  #left-dance {
+    background-color: #c9ab85;
+    padding: 12px 18px;
+    color: black;
+    font-size: 24px;
+    width: 75%;
+    margin-bottom: 10px;
+    margin-top: 85px;
+  }
+
+  #left-dance:hover {
+    color: white;
+  }
+
+  #right-dance {
+    background-color: #c9ab85;
+    padding: 12px 18px;
+    color: black;
+    font-size: 24px;
+    width: 75%;
+    margin-bottom: 85px;
+  }
+
+  /* Barber Services Mobile */ 
+  .barber-service-grid {
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(6, 700px)
+  }
+
+  /* Testimonials */
+  .stacked-container {
+    width: 50%;
+  }
+
+  .testimonial-title {
+    font-size: 40px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+  }
+
+  .testimonial-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .review {
+    font-size: 24px;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0 auto;
+    padding: 0;
+    margin: 0;
+  }
+
+  .loadingContainer {
+    display: none;
+  }
+
+  .testimonial-section {
+    height: 400px;
+    width: 100%;
+  }
+
+  .stacked-container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .products-section {
+    display: none;
+  }
+
+  /* Products section */
+
+  .products-section {
+    height: 150px;
+  }
+
+  .products-section img {
+    height: 30px;
+  }
+
+  /* Footer */
+  
+  #container span {
+    font-size: 35pt;
+  }
+
+  .footer {
+    padding-left: 25px;
+    padding-right: 20px;
+    padding-bottom: 100px;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .location-section {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(3, auto);
+    gap: 20px;
+    justify-content: space-around;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .location-section {
+    height: auto;
+  }
+
+
+  #location-title {
+    padding-top: 30px;
+  }
+
+  #opening-hours-title {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 30px;
+  }
+
+  .first-column {
+    height: auto;
     text-align: center;
   }
 
@@ -1080,14 +1747,14 @@
     text-align: center;
   }
 
-  #map-div {
-    margin-top: 250px;
-  }
-
   .card {
     width: 300px;
     height: 300px;
     margin: 20px auto;
+  }
+
+  .card p {
+    font-size: 12px;
   }
 
   .footer {
@@ -1097,220 +1764,128 @@
   .social-media-banner {
     width: 100%;
   }
-
-
-  /* Team page */
-  .team-intro {
-    padding-top: 5%;
-    font-size: 36px;
-  }
-
-  .member-card {
-    flex-direction: column;
-    min-width: 350px;
-    max-width: 1100px;
-    text-align: justify;
-  }
-
-  .member-name {
-    font-size: 20px;
-  }
-
-  .member-card p {
-    padding: 5px;
-  }
-
-  .member-card img {
-    margin: 0 auto;
-    width: 150px;
-    height: 150px;
-  }
-
-  .member-description {
-    font-size: 14px;
-    margin-top: 5px;
-    line-height: 22px;
-  }
-
-  /* Services Page */
-  .services-page-title {
-    padding-top: 5px;
-  }
-
-  .service-box {
-    width: 95%;
-    min-width: 300px;
-  }
-
-  .service-box a {
-    font-size: 12px;
-    padding: 8px 14px;
-  }
-
-  .section-title {
-    font-size: 20px;
-  }
-
-  .modal-content{
-    width: 95% !important;
-    padding: 5px !important;
-  }
-
-  .service-properties{
-    width: 90%;
-    text-align: center;
-  }
-
-  .service-properties p{
-    font-size: 16px;
-  }
-
-  .patch-test{
-    font-size: 11px;
-  }
-
-  .modal-button-container a{
-    width: 95% !important;
-    padding: 6px 12px;
-  }
-
-  .modal-button-container button{
-    width: 95% !important;
-  }
-
-  .grid-page-title {
-    margin-top: 20px !important;
-  }
-}
-
-/* Tablet Layout */
-
-@media (min-width: 651px) and (max-width: 768px) {
-
-  .fixed-sticker {
-    display: none;
-  }
-
-  /* Navbar */
-  .navbar {
-    height: 110px;
-    position: fixed;
-    width: 100%;
-    justify-content: space-around;
-  }
-
-  .nav-test-link{
-    margin-left: 10%;
-  }
-
-  .navbar-links {
-    justify-content: center;
-    width: 100%;
-  }
-
-  .navbar-links li a {
-    font-size: 14px;
-    margin-left: 8px;
-    margin-right: 8px;
-  }
-
-  .container {
-    background-image: url('/assets/backgrounds/hd-wallpaper-1382475.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  /* Landing Page */
-  .intro-with-buttons {
-    width: 100%;
-  }
-
-  .intro-with-buttons p:nth-of-type(1) {
-    font-size: 55px;
-  }
-
-  .intro-with-buttons p:nth-of-type(2) {
-    font-size: 32px;
-  }
-
-
-  /* Testimonials */
-  .stacked-container {
-    width: 50%;
-  }ervice-box
-
-  /* Products section */
-
-  .products-section {
-    height: 150px;
-  }
-
-  .products-section img {
-    height: 30px;
-  }
-
-  /* Footer */
-  .footer {
-    height: 700px;
-    justify-content: center;
-  }
-
-  .location-section {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    grid-template-rows: repeat(2, auto);
-    gap: 30px;
-    padding-left: 5%;
-    justify-content: center;
-    text-align: center;
-    margin-top: 10px;
-  }
-
-  .first-column {
-    width: 100%;
-    text-align: center;
-    width: 210px;
-    justify-self: center;
-    margin: 30 auto;
-    margin-top: 50px;
-  }
-
-  .first-column ul li {
-    font-size: 14px;
-  }
-
-  .second-column {
-    margin: 50px auto;
-    text-align: center;
-  }
-
-  .second-column ul li p {
-    font-size: 14px;
-  }
-
-  #map-div {
-    position: absolute;
-    margin-top: 320px;
-  }
-
-  .card {
-    width: 320px;
-    height: 250px;
-    padding: 10px;
-  }
-
-  .social-media-banner {
-    margin-top: 8%;
-  }
 }
 
 @media (min-width: 769px) and (max-width: 1250px) {
-  .fixed-sticker {
-    display: none !important;
-    margin-left: 80%;
-    margin-top: 688px;
-  }
+    /* Navbar */
+    .navbar {
+      height: 110px;
+      position: fixed;
+      width: 100%;
+      justify-content: center;
+    }
+  
+    .nav-test-link{
+      /* margin-left: 10%; */
+    }
+  
+    .navbar-links {
+      /* width: 100%; */
+    }
+  
+    .navbar-links li {
+      margin: 0px;
+    }
+  
+    .navbar-links li a {
+      font-size: 10px;
+      margin-left: 4px;
+      margin-right: 4px;
+    }
+  
+    .container {
+      background-image: url('/assets/backgrounds/hd-wallpaper-1382475.jpg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  
+    /* Landing Page */
+    .container {
+      width: 100%;
+      background-image: url('/assets/backgrounds/hd-wallpaper-1382475.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: auto;
+    }
+  
+    .intro-with-stacked-p{
+      background-color:transparent;
+      width: 90%;
+    }
+  
+    #barbershop {
+      margin-bottom: 35px;
+    }
+  
+    .four-seasons-intro span{
+      font-size: 56px;
+      color: #c9ab85;
+    }
+  
+    .four-seasons-intro span:hover {
+      color: #fff;
+    }
+  
+    #animated-p {
+      font-size: 36px;
+      margin-top: 50p;
+      color: white;
+    }
+  
+    @keyframes flip {
+      0%,80% {
+        color: black;
+        transform: rotateY(360deg);
+      }
+    }
+  
+    .intro-buttons-wild {
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .animate {
+      margin-top: 0;
+      position: relative;
+    }
+  
+    .animate.left.move {
+      right: 0%;
+      left: 0%;
+      transform: translate(0, 0);
+    }
+  
+    .animate.right.move {
+      right: 0%;
+      transform: translate(0, 0);
+    }
+  
+    #left-dance {
+      background-color: #c9ab85;
+      padding: 12px 18px;
+      color: black;
+      font-size: 24px;
+      width: 75%;
+      margin-bottom: 10px;
+      margin-top: 85px;
+    }
+  
+    #left-dance:hover {
+      color: white;
+    }
+  
+    #right-dance {
+      background-color: #c9ab85;
+      padding: 12px 18px;
+      color: black;
+      font-size: 24px;
+      width: 75%;
+      margin-bottom: 85px;
+    }
+  
 
   .container {
     background-image: url('/assets/backgrounds/hd-wallpaper-1382475.jpg');
@@ -1342,17 +1917,27 @@
     height: 30px;
   }
 
+  /* Barber Services Mobile */ 
+  .barber-service-grid {
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(3, 700px)
+  }
+
   /* Testimonials */
   .stacked-container {
     width: 40%;
   }
 
+  /* PRODUCTS SECTION */
+  .products-section {
+    display: none;
+  }
 
   /* Footer */
   .footer {
-    padding-top: 50px;
     padding-left: 25px;
     padding-right: 20px;
+    padding-bottom: 100px;
     width: 100%;
     justify-content: space-around;
   }
@@ -1361,14 +1946,13 @@
     display: grid;
     grid-template-columns: repeat(3, auto);
     grid-template-rows: repeat(1, auto);
-    gap: 20px;
+    gap: 120px;
     justify-content: space-around;
     justify-content: center;
     margin-top: 20px;
   }
 
   .first-column {
-    text-align: center;
     width: 180px;
   }
 
@@ -1395,6 +1979,103 @@
 
   .service-box{
     min-width: 300px;
+  }
+}
+
+/* FOOTER + GRID - SPECIAL */ 
+
+@media (min-width: 769px) and (max-width: 1100px){
+  /* Barber Services Mobile */ 
+  .barber-service-grid {
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(6, 700px)
+  }
+
+  /* TESTIMONIALS */
+  .stacked-container {
+    width: 70%;
+  }
+
+
+  /* FOOTER */ 
+  .footer {
+    display: block;
+    padding-left: 25px;
+    padding-right: 20px;
+    padding-bottom: 100px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .location-section {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(3, auto);
+    gap: 20px;
+    justify-content: space-around;
+    justify-content: center;
+    margin-top: 20px;
+    margin: 20px auto;
+  }
+
+  .location-section {
+    height: auto;
+    justify-content: center;
+  }
+
+
+  #location-title {
+    padding-top: 30px;
+  }
+
+  #opening-hours-title {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 30px;
+  }
+
+  .first-column {
+    height: auto;
+    text-align: center;
+    width: 100%;
+  }
+
+  .first-column ul {
+    width: auto;
+  }
+
+  .second-column {
+    height: auto;
+    text-align: center;
+    width: 100%;  height: auto;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .second-column ul {
+    width: auto;
+  }
+
+  #opening-hours-title{
+    margin-top:0;
+  }
+
+  .third-column {
+    margin-bottom: 100px;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1100px){
+  /* Barber Services Mobile */ 
+  .barber-service-grid {
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(3, 700px);
+    gap: 0px;
+  }
+
+  .barber-grid-item-desc {
+    font-size: 32px;
   }
 }
 
@@ -1431,6 +2112,7 @@
 
   #nav-test{
     width: 140px;
+    margin-left: 20px;
   }
 }
 
@@ -1567,101 +2249,6 @@
 }
 
 
-/* Service Grid */
-
-.grid-page-title {
-  text-align: center;
-  margin-top: 95px;
-  font-size: 52px;
-  font-family: 'Shadows Into Light', cursive;
-  color: #BA55D3;
-}
-
-.service-grid {
-  display: grid;
-  grid-template-columns: repeat(4, auto);
-  grid-template-rows: repeat(5, auto);
-  margin: 100px auto;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
-  padding: 50px;
-  margin-top: 0;
-}
-
-.grid-item {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  height: 440px !important;
-  max-width: 345px;
-  min-widtH: 305px;
-  height: auto;
-  text-align: justify;
-  border: 1px solid #BA55D3;
-  border-radius: 25px;
-  padding: 10px;
-  margin: 0 auto;
-}
-
-.grid-item-title {
-  height: 20px;
-  margin: 5px auto;
-  color: rgb(186, 85, 211, 0.7);
-  text-transform: uppercase;
-}
-
-.grid-item-description {
-  width: 80%;
-  margin: 5px auto;
-  margin-top: 10px;
-  height: auto;
-  font-size: 14px;
-}
-
-.grid-item-img {
-  width: 100%;
-  height: 200px;
-  margin: 0 auto;
-  margin-bottom: 5px;
-  border-radius: 25px;
-}
-
-.grid-item-button-container {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  margin: 0 auto;
-}
-
-.grid-item-button-container a {
-  text-decoration: none;
-}
-
-.grid-item-modal-trigger {
-  width: 90%;
-  text-align: center;
-  margin: 2px auto;
-  margin-bottom: 5px;
-  font-size: 22px;
-  padding: 8px 12px;
-  border-radius: 25px;
-  border: none;
-  background-color: rgb(186, 85, 211, 0.7);
-  text-transform: uppercase;
-  color: #fff;
-  height: auto;
-}
-
-.grid-item-modal-trigger:hover {
-  cursor: pointer;
-  background-color: #BA55D3
-}
-
-
 /* Modal Action */
 
 /* The Modal (background) */
@@ -1749,31 +2336,6 @@
   align-items: center;
   margin: 0 auto;
 }
-
-
-/* Service Grid Media Queries */
-
-@media(max-width: 699px){
-  .service-grid{
-    grid-template-columns: repeat(1, 315px);
-  }
-}
-
-@media(min-width: 700px) and (max-width: 1049px){
-  .service-grid{
-    grid-template-columns: repeat(2, 310px);
-  }
-}
-
-@media(min-width: 1050px) and (max-width: 1450px){
-  .service-grid{
-    grid-template-columns: repeat(3, 310px);
-    margin: 0 auto;
-    justify-items: center;
-    align-items: center;
-  }
-}
-
 
 /* Modal Responsiveness */
 
