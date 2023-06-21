@@ -4,8 +4,7 @@ const elts = {
 };
 
 const texts = [
-    "NO APPOINTMENT",
-    "REQUIRED",
+    "NO APPOINTMENT REQUIRED",
     "JUST WALK-IN",
 ];
 

@@ -230,7 +230,7 @@ body{
   opacity: 1;
 }
 
-.animate {
+/* .animate {
   margin-top: 30px;
   background-color: #c9ab85;
   transition: all 1.25s ease-in;
@@ -257,7 +257,7 @@ body{
   right: 48%; 
   transform: translate(100%, 0);
   background-color: black;
-}
+} */
 
 
 /* #animated-title{
@@ -801,6 +801,7 @@ body{
 
 .second-column ul li p {
   font-size: 16px;
+  padding: 0 4px;
 }
 
 .closed {
