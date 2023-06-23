@@ -142,7 +142,7 @@ body{
   justify-content: center;
   align-items: center;
   text-align: center;
-  height: 850px;
+  height: 100vh;
   background-image: url('/4season-assets/pexels-photo-995300.webp');
   background-position: center;
   background-repeat: no-repeat; 
@@ -366,7 +366,7 @@ body{
   justify-content: center;
   padding-top: 50px;
   width: 100%;
-  height: auto;
+  height: 120vh;
   padding: 100px;
   text-align: center;
   background-color: #fff;
@@ -375,10 +375,10 @@ body{
 }
 
 #about-title {
-  font-size: 56px;
+  font-size: 36px;
   text-transform: uppercase;
   letter-spacing: 3px;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
 }
 
 .text-sequence {
@@ -409,17 +409,17 @@ body{
 }
 
 .about-button {
-  width: 250px;
+  width: 200px;
   align-self: center;
   border: none;
   border-radius: 25px;
-  padding: 16px 24px;
-  font-size: 16px;
+  padding: 12px 20px;
+  font-size: 15px;
   text-transform: uppercase;
   letter-spacing: 2px;
   background-color: black;
-  margin-top: 75px;
-  margin-bottom: 75px;
+  margin-top: 25px;
+  margin-bottom: 35px;
 }
 
 .about-button a {
@@ -434,10 +434,14 @@ body{
 
 /* Testimonial Section */
 
+.reviews {
+  height: 100vh;
+}
+
 .testimonial-title {
   text-align: center;
   color: black;
-  font-size: 58px;
+  font-size: 48px;
   margin-top: 150px;
   font-family: 'Shadows Into Light', cursive;
 }
@@ -448,8 +452,9 @@ body{
   text-align: center;
   width: 100%;
   align-items: center;
-  height: 600px;
+  height: auto;
   background-color: #c9ab85;
+  margin-top: 30vh;
 }
 
 .stacked-container {
@@ -469,7 +474,15 @@ body{
   height: auto;
   text-align: justify;
   margin-top: 10px;
-  font-size: 36px;
+  font-size: 32px;
+}
+
+.reviewer-img {
+  margin-top: 50px;
+  margin-bottom: 25px;
+  width: 250px;
+  height: 250px;
+  border-radius: 100%;
 }
 
 .reviewer {
@@ -1282,12 +1295,16 @@ body{
   }
 
   /* Landing Page */
+  #intro {
+    height: 100vh;
+  }
+
   .container {
     width: 100%;
     background-image: url('/assets/backgrounds/hd-wallpaper-1382475.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    height: auto;
+    height: 100vh;
   }
 
   .intro-with-stacked-p{
@@ -1368,12 +1385,34 @@ body{
   }
 
   /* About-us mobile */
+  .about {
+    height: 100vh;
+  }
+
+  #about-us {
+    height: 100vh;
+  }
+
+  #about-title{
+    padding-left: 20px;
+  }
+
+  .text-sequence p:nth-of-type(2) {
+    display: none;
+  }
+
+  .text-sequence p:nth-of-type(3) {
+    display: none;
+  }
+
   .text-sequence p:nth-of-type(4) {
     display: none;
   }
 
   .paragraph span {
-    font-size: 18px;
+    font-size: 16px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   #about-title {
@@ -1387,26 +1426,55 @@ body{
   /* Barber Services Mobile */ 
   .barber-service-grid {
     grid-template-columns: repeat(1, auto);
-    grid-template-rows: repeat(6, 505px);
+    grid-template-rows: repeat(6, auto);
   }
 
+  .barber-grid-item:nth-of-type(1) {
+    background-size: cover;
+  }
+
+  .barber-grid-item:nth-of-type(2) {
+    background-size: cover;
+  }
+
+  .barber-grid-item:nth-of-type(3) {
+    background-size: cover;
+  }
+
+  .barber-grid-item:nth-of-type(4) {
+    background-size: cover;
+  }
+
+  .barber-grid-item:nth-of-type(5) {
+    background-size: cover;
+  }
+
+  .barber-grid-item:nth-of-type(6) {
+    background-size: cover;
+  }
+
+
   .barber-grid-item {
-    background-color: red;
-    background-size: auto;
+    background-color: black;
+    background-size: stretch;
+    align-items: center;
   }
 
   .barber-grid-item-title {
     font-size: 60px;
+    padding: 10px;
   }
 
   .barber-grid-item-desc {
     font-size: 32px;
+    margin-top: 35px;
   }
 
   .barber-grid-item-price {
     margin-bottom: 0px;
     font-size: 55px;
     padding-bottom: 20px;
+    margin-top: 35px;
   }
 
   /* Testimonial Mobile */
@@ -1591,12 +1659,16 @@ body{
   }
 
   /* Landing Page */
+  #intro {
+    height: 100vh;
+  }
+
   .container {
     width: 100%;
     background-image: url('/assets/backgrounds/hd-wallpaper-1382475.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    height: auto;
+    height: 100vh;
   }
 
   .intro-with-stacked-p{
@@ -1676,37 +1748,62 @@ body{
     margin-bottom: 85px;
   }
 
+  /* ABOUT SECTION */
+  .about {
+    height: 100vh;
+  }
+
+  .about-section {
+    height: 100vh;
+  }
+
+  #about-title{
+    padding-left: 20px;
+  }
+
+  .text-sequence p:nth-of-type(4) {
+    display: none;
+  }
+
+  .paragraph span {
+    font-size: 18px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+
   /* Barber Services Mobile */ 
   .barber-service-grid {
     grid-template-columns: repeat(1, auto);
-    grid-template-rows: repeat(6, 700px)
+    grid-template-rows: repeat(6, auto)
+  }
+
+  .barber-grid-item-title{
+    padding-top: 75px;
   }
 
   /* Testimonials */
-  .stacked-container {
-    width: 50%;
-  }
-
   .testimonial-title {
     font-size: 40px;
-    margin-top: 50px;
+    margin-top: 150px;
     margin-bottom: 10px;
   }
 
   .testimonial-section {
     display: flex;
+    width: 100%;
+    height: auto;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
   }
 
   .review {
     font-size: 24px;
-    width: 100%;
+    width: 80%;
     padding-left: 10px;
     padding-right: 10px;
     margin: 0 auto;
-    padding: 0;
-    margin: 0;
   }
 
   .loadingContainer {
@@ -1714,13 +1811,15 @@ body{
   }
 
   .testimonial-section {
-    height: 400px;
     width: 100%;
   }
 
   .stacked-container {
-    width: 100%;
+    width: auto;
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .products-section {
@@ -1856,7 +1955,7 @@ body{
       background-image: url('/assets/backgrounds/hd-wallpaper-1382475.jpg');
       background-repeat: no-repeat;
       background-size: cover;
-      height: auto;
+      height: 100vh;
     }
   
     .intro-with-stacked-p{
@@ -1970,7 +2069,7 @@ body{
   /* Barber Services Mobile */ 
   .barber-service-grid {
     grid-template-columns: repeat(2, auto);
-    grid-template-rows: repeat(3, 700px)
+    grid-template-rows: repeat(3, 60vh)
   }
 
   /* Testimonials */
@@ -2035,10 +2134,40 @@ body{
 /* FOOTER + GRID - SPECIAL */ 
 
 @media (min-width: 769px) and (max-width: 1100px){
+  #intro{
+    height: 100vh;
+  }
+
+  .container {
+    height: 100vh;
+  }
+
+  /* ABOUT US */
+  .about {
+    height: 100vh;
+  }
+
+  #about-us {
+    height: 100vh;
+  }
+
+  .paragraph:nth-of-type(4) {
+    display: none;
+  }
+
+
   /* Barber Services Mobile */ 
   .barber-service-grid {
     grid-template-columns: repeat(1, auto);
-    grid-template-rows: repeat(6, 700px)
+    grid-template-rows: repeat(6, auto)
+  }
+
+  .barber-grid-item-title {
+    padding-top: 95px;
+  }
+
+  .barber-grid-item-price {
+    padding-top: 35px;
   }
 
   /* TESTIMONIALS */
@@ -2123,6 +2252,11 @@ body{
 
     .container {
       background-size: cover;
+    }
+
+    .barber-service-grid {
+      grid-template-columns: repeat(3, 33vw);
+      grid-template-rows: repeat(2, 65vh);
     }
 
     .barber-grid-item-desc {
