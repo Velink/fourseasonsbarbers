@@ -581,13 +581,13 @@ body{
 .barber-grid-item:nth-of-type(2){
   background-image: url(/4season-assets/pexels-photo-10775078.jpeg);
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
 }
 
 .barber-grid-item:nth-of-type(3){
   background-image: url(/4season-assets/pexels-photo-5188619.jpeg);
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
 }
 
 .barber-grid-item:nth-of-type(4){
@@ -599,13 +599,13 @@ body{
 .barber-grid-item:nth-of-type(5){
   background-image: url(/4season-assets/pexels-photo-6080361.jpeg);
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
 }
 
 .barber-grid-item:nth-of-type(6){
   background-image: url(/4season-assets/pexels-photo-9387375.jpeg);
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
 }
 
 .barber-grid-item-title{
@@ -2255,8 +2255,9 @@ body{
     }
 
     .barber-service-grid {
+      height: 100vh;
       grid-template-columns: repeat(3, 33vw);
-      grid-template-rows: repeat(2, 65vh);
+      grid-template-rows: repeat(2, auto);
     }
 
     .barber-grid-item-desc {
