@@ -2482,7 +2482,17 @@ body{
 
 .reviews{
   background-color: #c9ab85;
+  display: flex;
+  flex-direction: column;
 }
+
+.layout-div {
+  margin-top: 60px;
+}
+
+/* .testimonial-section {
+  margin-top: 30px;
+}  */
 
 /* SVG Experiment */
 .path {
