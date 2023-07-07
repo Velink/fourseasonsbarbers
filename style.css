@@ -1394,11 +1394,11 @@ body{
 
   /* About-us mobile */
   .about {
-    height: 100vh;
+    height: auto;
   }
 
   #about-us {
-    height: 100vh;
+    height: auto;
   }
 
   #about-title{
@@ -1766,6 +1766,7 @@ body{
 
   #about-title{
     padding-left: 20px;
+    padding-top: 100px;
   }
 
   /* .text-sequence p:nth-of-type(4) {
@@ -1773,7 +1774,7 @@ body{
   } */
 
   .paragraph span {
-    font-size: 18px;
+    font-size: 16px;
     padding-left: 20px;
     padding-right: 20px;
   }
