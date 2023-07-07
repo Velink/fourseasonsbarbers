@@ -9,12 +9,23 @@ html {
 }
 
 .contact-us{
-    height: 100vh;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #c9ab85;
 }
 
-body {
-  background: #F2F3EB;
+.gallery-title{
+  color: black;
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
+
+/* body {
+  background: #F2F3EB;
+} */
 
 button {
   overflow: visible;
@@ -39,18 +50,20 @@ textarea {
 }
 
 #container-contact {
-  border: solid 3px black;
-  max-width: 768px;
+  border: solid 3px #c9ab85;
+  width: 100vw;
   margin: 60px auto;
-  position: relative;
   height: auto;
   display: flex;
   flex-direction: column;
+  background-color: #c9ab85;
 }
 
 form {
   padding: 37.5px;
   margin: 50px 0;
+  width: 50vw;
+  margin: 90px auto;
 }
 
 h1 {
@@ -63,7 +76,7 @@ h1 {
 }
 
 .underline {
-  border-bottom: solid 2px #474544;
+  border-bottom: solid 2px #c9ab85;
   margin: -0.512em auto;
   width: 80px;
 }
@@ -82,7 +95,7 @@ h1 {
 }
 
 .icon:hover{
-    fill: #c9ab85;
+    fill: #FFF;
 }
 
 .email {
@@ -93,8 +106,8 @@ h1 {
 input[type='text'], [type='email'], select, textarea {
 	background: none;
   border: none;
-	border-bottom: solid 2px #474544;
-	color: #474544;
+	border-bottom: solid 2px black;
+	color: black;
 	font-size: 1.000em;
   font-weight: 400;
   letter-spacing: 1px;
@@ -155,7 +168,7 @@ textarea {
 }
 
 ::-webkit-input-placeholder {
-	color: #474544;
+	color: black;
 }
 
 :-moz-placeholder { 
@@ -173,7 +186,7 @@ textarea {
 }
 
 #form_button {
-  border: solid 2px black;
+  border: solid 2px #c9ab85;
   background: black;
   color: #c9ab85;
   cursor: pointer;
