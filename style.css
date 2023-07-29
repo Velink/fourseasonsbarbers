@@ -461,8 +461,6 @@ body{
   align-items: center;
   height: auto;
   background-color: #c9ab85;
-  margin-top: 25vh;
-  margin-bottom: 100px;
 }
 
 .stacked-container {
@@ -542,6 +540,11 @@ body{
 
 
 /* SERVICES SECTION */
+
+
+#services {
+  min-height: 100vh;
+}
 
 .service-section{
   display: flex;
@@ -2076,7 +2079,7 @@ body{
   /* Barber Services Mobile */ 
   .barber-service-grid {
     grid-template-columns: repeat(2, auto);
-    grid-template-rows: repeat(3, 60vh)
+    grid-template-rows: repeat(3, auto)
   }
 
   /* Testimonials */
@@ -2263,7 +2266,7 @@ body{
     }
 
     .barber-service-grid {
-      height: 100vh;
+      min-height: 100vh;
       grid-template-columns: repeat(3, 33vw);
       grid-template-rows: repeat(2, auto);
     }
@@ -2482,15 +2485,20 @@ body{
 }
 
 .reviews{
-  height: 100vh;
+  height: auto;
   background-color: #c9ab85;
   display: flex;
+  justify-content: space-around;
   flex-direction: column;
   text-align: center;
 }
 
+.testimonial-section{
+  height: 100vh;
+}
+
 .testimonial-title {
-  align-self: center;
+  position: absolute;
 }
 
 
@@ -2770,5 +2778,43 @@ body{
 
   .nails-gallery{
     grid-template-columns: repeat(2, auto);
+  }
+}
+
+
+/* HEIGHT MEDIA QUERY */
+
+@media (max-height: 800px){
+  .four-seasons-intro span{
+    font-size: 110px;
+  }
+
+  #animated-p {
+    font-size: 30px;
+  }
+
+  .styled-button {
+    padding: 16px 33px;
+    font-size: 32px;
+  }
+
+  #about-title{
+    font-size: 28px;
+    margin-bottom: 25px;
+  }
+  
+  .text-sequence .paragraph {
+    font-size: 18px;
+    font-weight: 100;
+    line-height: 1.5em;
+  }
+
+  .about-button {
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+
+  #services-animation {
+    height: 200px;
   }
 }
